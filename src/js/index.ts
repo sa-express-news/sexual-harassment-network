@@ -1,9 +1,16 @@
-function sayHello(name) {
-    return `Hello from ${name}`;
-}
-function showHello(divName, name) {
-    const elt = document.getElementById(divName);
-    elt.innerText = sayHello(name);
-}
+import * as cytoscape from 'cytoscape';
+import { elements, style } from './data';
 
-showHello("greeting", "the Express-News!");
+const cy = cytoscape({
+    container: document.getElementById('cy'),
+    panningEnabled: false,
+
+    elements: elements,
+
+    style: style as any,
+
+    layout: {
+        name: 'grid',
+        rows: 3
+    }
+});

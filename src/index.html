@@ -8,8 +8,70 @@
 </head>
 
 <body>
-    <p id="greeting">Loading ...</p>
+    <div id="cy"></div>
     <script src="js/bundle.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.2.6/cytoscape.min.js"></script>
+    <script>
+        var cy = cytoscape({
+
+            container: document.getElementById('cy'), // container to render in
+
+            elements: [ // list of graph elements to start with
+                { // node a
+                    data: { id: 'a' }
+                },
+                { // node b
+                    data: { id: 'b' }
+                },
+                { // edge ab
+                    data: { id: 'ab', source: 'a', target: 'b' }
+                }
+            ],
+
+            // style: cytoscape.stylesheet()
+            //     .selector('node')
+            //     .css({
+            //         'background-color': '#666',
+            //         'label': 'data(id)'
+            //     })
+            //     .selector('#a')
+            //     .css({
+            //         'background-image': 'https://farm2.staticflickr.com/1261/1413379559_412a540d29_b.jpg'
+            //     }),
+
+            style: [ // the stylesheet for the graph
+                {
+                    selector: 'node',
+                    style: {
+                        'background-color': '#666',
+                        'label': 'data(id)'
+                    }
+                },
+
+                {
+                    selector: 'edge',
+                    style: {
+                        'width': 3,
+                        'line-color': '#ccc',
+                        'target-arrow-color': '#ccc',
+                        'target-arrow-shape': 'triangle'
+                    }
+                },
+
+                {
+                    selector: '#a',
+                    style: {
+                        'background-image': 'https://farm4.staticflickr.com/3063/2751740612_af11fb090b_b.jpg'
+                    }
+                }
+            ],
+
+            layout: {
+                name: 'grid',
+                rows: 1
+            }
+
+        });</script> -->
 </body>
 
 </html>
